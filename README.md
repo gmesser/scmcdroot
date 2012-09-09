@@ -1,7 +1,7 @@
 scmcdroot
 =========
 
-Change to the root directory of a directory under version control.
+Change to the SCM root directory of a directory under version control.
 
 Search upwards in the directory tree until an SCM dir is found or the root
 directory is reached.
