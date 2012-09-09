@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# Search upwards in the directory tree until an SCM dir is found or the root
+# directory is reached.
+# If found, leave the current directory where the SCM directory was found.
+# If not found, return to the starting directory.
+
+owd=${PWD}
+#printf "Starting in %s\n" $owd
+while [ 1 = 1 ]
+do
+	wd=${PWD}
+	#printf "Looking for an SCM dir in %s\n" $wd
+	if [ $wd = "/" ]; then
+		printf "No .svn, .git, .bzr, or .p4 directory found above %s\n" $owd
+		cd $owd
+		break
+	fi
+	
+	if [ -d ".svn" ]; then
+		break
+	elif [ -d ".git" ]; then
+		break
+	elif [ -d ".bzr" ]; then
+		break
+	elif [ -d ".p4" ]; then
+		break
+	else
+		cd ..
+	fi
+done
