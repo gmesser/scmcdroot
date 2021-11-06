@@ -8,6 +8,7 @@ Change to the SCM root directory of a directory under version control.  That is 
 *Usage:*
 
 . scmcdroot
+
 To run the scmcdroot shell script, use '.' (dot), then ' ' (space), then "scmcdroot". 
 
 *Note:*
@@ -17,7 +18,7 @@ You must "source" the script so that it runs in the current shell in order for t
 ## scmwd - shell script
 Print the scm working directory, ie. the directory containing the .git, .svn, .bzr, or .p4 directory.
 
-You can change to that directory by executing one of the following commands:
+You can change to that directory by executing the following command:
 
 ```
 cd `scmwd` 
@@ -26,7 +27,7 @@ cd `scmwd`
 ## scmwd.py - Python version of the above shell script.
 Print the scm working directory, ie. the directory containing the .git, .svn, .bzr, or .p4 directory.
 
-You can change to that directory by executing one of the following commands:
+You can change to that directory by executing the following command:
 
 ```
 cd `python scmwd` 
