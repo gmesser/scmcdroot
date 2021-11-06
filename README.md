@@ -1,21 +1,31 @@
-scmcdroot
-=========
+# scmcdroot
 
-Change to the SCM root directory of a directory under version control.
+The commands in this project Search upwards in the directory tree until they find an SCM directory or until they reach the root directory.
 
-Search upwards in the directory tree until an SCM dir is found or the root
-directory is reached.
-If found, leave the current directory where the SCM directory was found.
-If not found, return to the starting directory.
+## scmcdroot - bash script 
+Change to the SCM root directory of a directory under version control.  That is the directory containg the .git, .svn, .bzr, or .p4 directory
 
-Usage: . scmcdroot
+*Usage:*
+$ . scmcdroot
+To run the scmcdroot shell script, use '.' (dot), then ' ' (space), then "scmcdroot". 
 
-Note: This is a shell script which runs under /bin/sh. 
-The command is '.' (dot), then ' ' (space), then "scmcdroot". 
-You must source the script in the current shell or else the system will 
-run the script in a new shell, where the directory will be changed, but
-the directory in your current shell will not be changed.  Then when the 
-new shell finishes running the script and ends, you will be in your 
-original shell, still in the directory you were in when you ran the 
-script.
+*Note:*
+You must "source" the script so that it runs in the current shell in order for the directory change to persist when the command ends.  If you don't source the script in the current shell, the system will start a new shell and run the script in that shell.  The directory will be changed in the new shell, but the directory in your current shell will not be changed.  When the new shell finishes running the script, you will be in your original shell, still in the directory you were in when you ran the script.
 
+## scmwd - bash script
+Print the scm working directory, ie. the directory containing the .git, .svn, .bzr, or .p4 directory.
+
+You can change to that directory by executing one of the following commands:
+
+```
+cd `scmwd` 
+```
+
+## scmwd.py - Python version of the above shell script.
+Print the scm working directory, ie. the directory containing the .git, .svn, .bzr, or .p4 directory.
+
+You can change to that directory by executing one of the following commands:
+
+```
+cd `python scmwd` 
+```
