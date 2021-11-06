@@ -2,7 +2,7 @@
 
 The commands in this project Search upwards in the directory tree until they find an SCM directory or until they reach the root directory.
 
-## scmcdroot - bash script 
+## scmcdroot - shell script 
 Change to the SCM root directory of a directory under version control.  That is the directory containg the .git, .svn, .bzr, or .p4 directory
 
 *Usage:*
